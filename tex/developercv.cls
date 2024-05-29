@@ -1,17 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CV
-%
-% This CV template is based on:
-% https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc
-% by Omar Roldan
-%
-% Modified by Yunus Emre Yavuz
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	CLASS CONFIGURATION
 %----------------------------------------------------------------------------------------
