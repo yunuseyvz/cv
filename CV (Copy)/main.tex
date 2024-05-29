@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CV
+%
+% This CV template is based on:
+% https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc
+% by Omar Roldan
+%
+% Modified by Yunus Emre Yavuz
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage[ngerman, english]{babel}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+\setlength{\columnsep}{0mm}
+\usepackage{ifthen}
+
+% Set the language variable: 0 for German, 1 for English
+\newcommand{\lang}{0}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.5\textwidth} 
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{John Doe}}}} % First name
+	
+	\vspace{6pt}
+	
+	{\Large Job Title} % Career or current job title
+ 
+    \vspace{18pt}
+    \icon{Phone}{11}{+1 234 567 890}
+    
+    \icon{Envelope}{11}{\href{mailto:johndoe@example.com}{johndoe@example.com}}
+    
+    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/johndoe}{linkedin.com/in/johndoe}}
+    
+    \icon{Github}{11}{\href{https://github.com/johndoe}{github.com/johndoe}}
+    
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}
+\vspace{-\baselineskip}
+	\includegraphics[width=\linewidth]{photo.jpg} % Insert your image
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{10 pt}
+\ifthenelse{\equal{\lang}{0}}{
+    \cvsect{Akademischer Werdegang}
+    \begin{entrylist}
+        \entry
+            {Ab \par xx/xxxx}
+            {Universität}
+            {Human Computer Interaction (M.Sc.)}
+            { }
+        \entry
+            {xx/xxxx -- \par  xx/xxxx}
+            {Universität}
+            {Medieninformatik (B.Sc.)}
+            {\textit{Thema der Abschlussarbeit: xxx}
+            
+            Beschreibung der Arbeit.}
+        \entry
+            {xx/xxxx -- \par  xx/xxxx}
+            {Gymnasium}
+            {Abitur}
+            { }
+    \end{entrylist}
+}{
+    \cvsect{Education}
+    \begin{entrylist}
+        \entry
+            {Starting \par xx/xxxx}
+            {University Name}
+            {Human Computer Interaction (M.Sc.)}
+            { }
+        \entry
+            {xx/xxxx -- \par  xx/xxxx}
+            {University Name}
+            {Media Informatics (B.Sc.)}
+            {\textit{Thesis Topic: xxx}
+            
+            Thesis Description.}
+        \entry
+            {xx/xxxx -- \par  xx/xxxx}
+            {High School Name}
+            {High School Diploma}
+            { }
+    \end{entrylist}
+}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\ifthenelse{\equal{\lang}{0}}{
+    \cvsect{Berufserfahrung}
+    \begin{entrylist}
+        \entry
+            {xx/xxxx -- \par xx/xxxx}
+            {Arbeitgeber}
+            {Werkstudent 1}
+            {Beschreibung.}
+        \entry
+            {xx/xxxx -- \par xx/xxxx}
+            {Arbeitgeber}
+            {Werkstudent 2}
+            {Beschreibung.}
+    \end{entrylist}
+}{
+    \cvsect{Experience}
+    \begin{entrylist}
+        \entry
+            {xx/xxxx -- \par xx/xxxx}
+            {Company Name}
+            {Working Student 1}
+            {Description.}
+        \entry
+            {xx/xxxx -- \par xx/xxxx}
+            {Company Name}
+            {Working Student 2}
+            {Description.}
+    \end{entrylist}
+}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\begin{minipage}[t]{0.48\textwidth}
+    \cvsect{Skills}
+    \vspace{-10 pt}
+    \begin{tabbing}
+        \hspace{2cm} \= \kill
+        Java \> \skilllevel{3} \\
+        JavaScript \> \skilllevel{3} \\
+        React \> \skilllevel{2} \\
+        Python \> \skilllevel{1} \\
+        C/C++ \> \skilllevel{1} \\
+    \end{tabbing}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \ifthenelse{\equal{\lang}{0}}{
+        \cvsect{Sprachen}
+        \vspace{-10 pt}
+        \begin{tabbing}
+            \hspace{2cm} \= \kill
+            Deutsch \> \skilllevel{4} \\
+            Türkisch \> \skilllevel{4} \\
+            Englisch\> \skilllevel{3} \\
+            Französisch \> \skilllevel{2} \\
+        \end{tabbing}
+    }{
+        \cvsect{Languages}
+        \vspace{-10 pt}
+        \begin{tabbing}
+            \hspace{2cm} \= \kill
+            German \> \skilllevel{4} \\
+            Turkish \> \skilllevel{4} \\
+            English\> \skilllevel{3} \\
+            French \> \skilllevel{2} \\
+        \end{tabbing}
+    }
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+% SIGNATURE AND DATE
+%----------------------------------------------------------------------------------------
+
+\vspace{20pt} 
+
+\begin{flushright}
+\begin{tabular}{@{}l@{}}
+\vspace{3pt}
+\ifthenelse{\equal{\lang}{0}}{München, \today}{City, \today} \\
+\vspace{3pt}
+\includegraphics[width=3cm]{signature.png} \\ 
+%\rule{4cm}{0.4pt}
+\vspace{3pt}
+\textit{John Doe}
+\end{tabular}
+\end{flushright}
+
+\end{document}
