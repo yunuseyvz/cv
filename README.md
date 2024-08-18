@@ -1,6 +1,6 @@
 # CV Template
-<div align="right">
-<img alt="Portfolio" src="/preview.jpg" width="90%">
+<div align="center">
+<img alt="Portfolio" src="/preview.jpg" width="60%">
 </div>
 
 This repository contains a LaTeX-based CV template, originally based on [Omar Roldan's CV template](https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc) and modified for general use. This template is designed to be flexible and easy to customize, allowing you to create a professional CV with minimal effort.
