@@ -3,7 +3,13 @@
 <img alt="Portfolio" src="/preview.jpg" width="60%">
 </div>
 
-This repository contains a LaTeX-based CV template, originally based on [Omar Roldan's CV template](https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc) and modified for general use. This template is designed to be flexible and easy to customize, allowing you to create a professional CV with minimal effort.
+This repository contains my LaTeX-based CV, originally based on [Omar Roldan's CV template](https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc) and modified for general use. 
+
+<div align="center">
+  <a href="https://latexonline.cc/compile?git=https://github.com/yunuseyvz/cv&target=tex/main.tex&command=pdflatex">
+    <img src="https://img.shields.io/badge/Preview-View%20PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader" alt="Preview PDF">
+  </a>
+</div>
 
 ## Features
 
