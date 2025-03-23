@@ -1,11 +1,6 @@
 # CV
-<div align="center">
-<img alt="Portfolio" src="/preview.jpg" width="60%">
-</div>
 
-This repository contains my LaTeX-based CV, originally based on [Omar Roldan's CV template](https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc) and modified for general use. 
-
-<div align="center">
+<div align="left">
   <a href="https://latexonline.cc/compile?git=https://github.com/yunuseyvz/cv&target=tex/main.tex&command=pdflatex">
     <img src="https://img.shields.io/badge/Preview-View%20PDF-blue?style=for-the-badge&logo=adobe-acrobat-reader" alt="Preview PDF">
   </a>
@@ -52,6 +47,10 @@ The template includes the following sections:
 - **Languages**: Specify the languages you speak and your proficiency level.
 - **Profile Picture**: Include a profile picture by replacing the `photo.jpg` file.
 - **Signature**: Include your signature by replacing the `signature.png` file.
+
+## Credits
+
+Based on [Omar Roldan's CV template](https://overleaf.com/latex/templates/cv-developer/rdycxzvvnvcc) 
 
 ## License
 
