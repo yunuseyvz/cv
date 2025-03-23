@@ -1,4 +1,4 @@
-# CV Template
+# CV
 <div align="center">
 <img alt="Portfolio" src="/preview.jpg" width="60%">
 </div>
