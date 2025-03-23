@@ -18,15 +18,18 @@
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage[ngerman, english]{babel}
+\setlength{\parindent}{0pt}
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage[ddmmyyyy]{datetime}
 \renewcommand{\dateseparator}{.}
 \setlength{\columnsep}{0mm}
 \usepackage{ifthen}
-
+\usepackage{tcolorbox}
+\usepackage{parcolumns}
+\usepackage{tikz}
 % Set the language variable: 0 for German, 1 for English
-\newcommand{\lang}{0}
+\newcommand{\lang}{1}
 
 %----------------------------------------------------------------------------------------
 \begin{document}
@@ -38,50 +41,56 @@
 \begin{minipage}[t]{0.5\textwidth} 
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	
-	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{John Doe}}}} % First name
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Yunus Emre Yavuz}}}} % First name
 	
 	\vspace{6pt}
 	
-	{\Large Job Title} % Career or current job title
+	{\Large Student} % Career or current job title
  
     \vspace{18pt}
-    \icon{Phone}{11}{+1 234 567 890}
     
-    \icon{Envelope}{11}{\href{mailto:johndoe@example.com}{johndoe@example.com}}
+    \icon{Envelope}{11}{\href{mailto:yunus@yuemya.de}{yunus@yuemya.de}}
+
+    \icon{Globe}{11}{\href{www.yuemya.de}{Portfolio: yuemya.de}}
     
-    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/johndoe}{linkedin.com/in/johndoe}}
+    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/yunuseyvz}{LinkedIn: yunuseyvz}}
     
-    \icon{Github}{11}{\href{https://github.com/johndoe}{github.com/johndoe}}
+    \icon{Github}{11}{\href{https://github.com/yunuseyvz}{GitHub: yunuseyvz}}
     
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.25\textwidth}
+\begin{minipage}[t]{0.22\textwidth}
 \vspace{-\baselineskip}
-	\includegraphics[width=\linewidth]{photo.jpg} % Insert your image
+	\includegraphics[width=\linewidth]{photo.jpg}
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\vspace{10 pt}
+\vspace{10pt}
 \ifthenelse{\equal{\lang}{0}}{
     \cvsect{Akademischer Werdegang}
     \begin{entrylist}
         \entry
-            {Ab \par xx/xxxx}
-            {Universität}
+            {Ab \par 04/2025}
+            {LMU München}
             {Human Computer Interaction (M.Sc.)}
             { }
         \entry
-            {xx/xxxx -- \par  xx/xxxx}
-            {Universität}
-            {Medieninformatik (B.Sc.)}
-            {\textit{Thema der Abschlussarbeit: xxx}
+            {10/2019 -- \par  03/2025}
+            {LMU München}
+            {Medieninformatik (B.Sc.), Anwendungsfach Mensch-Maschine-Interaktion}
+            {Thema der Abschlussarbeit: Bewertung von Phishing-Warntechniken
             
-            Beschreibung der Arbeit.}
+            Entwicklung und Bewertung verschiedener visueller Phishing-Warnungen in E-Mail-Clients im Rahmen einer Nutzerstudie. Die Studie verwendete Eye-Tracking-Technologie und qualitatives Feedback, um das Benutzerengagement und die Reaktionszeiten zu bewerten und zu verbessern.}
         \entry
-            {xx/xxxx -- \par  xx/xxxx}
-            {Gymnasium}
+            {10/2018 -- \par  09/2019}
+            {TU München}
+            {Elektro- und Informationstechnik (B.Sc.)}		
+            { }
+        \entry
+            {09/2010 -- \par  06/2018}
+            {Adolf-Weber-Gymnasium München}
             {Abitur}
             { }
     \end{entrylist}
@@ -89,21 +98,26 @@
     \cvsect{Education}
     \begin{entrylist}
         \entry
-            {Starting \par xx/xxxx}
-            {University Name}
+            {Starting \par 04/2025}
+            {LMU Munich}
             {Human Computer Interaction (M.Sc.)}
             { }
         \entry
-            {xx/xxxx -- \par  xx/xxxx}
-            {University Name}
-            {Media Informatics (B.Sc.)}
-            {\textit{Thesis Topic: xxx}
+            {10/2019 -- \par  03/2025}
+            {LMU Munich}
+            {Media Informatics (B.Sc.), minor Human Computer Interaction}
+            {Thesis Topic: Evaluation of Phishing Warning Techniques
             
-            Thesis Description.}
+            Designed and evaluated different visual phishing warnings in a user study. The study used eye-tracking technology and qualitative feedback to assess and improve the user experience.}
         \entry
-            {xx/xxxx -- \par  xx/xxxx}
-            {High School Name}
-            {High School Diploma}
+            {10/2018 -- \par  09/2019}
+            {TU Munich}
+            {Electrical Engineering and Information Technology (B.Sc.)}		
+            { }
+        \entry
+            {09/2010 -- \par  06/2018}
+            {Adolf-Weber-Gymnasium Munich}
+            {Abitur}
             { }
     \end{entrylist}
 }
@@ -116,87 +130,95 @@
     \cvsect{Berufserfahrung}
     \begin{entrylist}
         \entry
-            {xx/xxxx -- \par xx/xxxx}
-            {Arbeitgeber}
-            {Werkstudent 1}
-            {Beschreibung.}
+            {01/2022 -- \par 12/2023}
+            {MTU Aero Engines AG}
+            {Werkstudent im Bereich IT Quality \& IT Governance}
+            {Unterstützung im Software Asset Management durch Organisation, Katalogisierung und Pflege des Softwarebestands des Unternehmens, einschließlich Lizenzen, Abonnements und Nutzungsdaten.}
         \entry
-            {xx/xxxx -- \par xx/xxxx}
-            {Arbeitgeber}
-            {Werkstudent 2}
-            {Beschreibung.}
+            {05/2019 -- \par 02/2020}
+            {Münchener Hypothekenbank eG}
+            {Werkstudent im Bereich Immobilienfinanzierung Privatkunden}
+            {Überprüfung von Dokumenten, Anforderung fehlender Unterlagen, Pflege von Daten in SAP sowie Korrespondenz mit Kunden, Notaren und Banken.}
     \end{entrylist}
 }{
     \cvsect{Experience}
     \begin{entrylist}
         \entry
-            {xx/xxxx -- \par xx/xxxx}
-            {Company Name}
-            {Working Student 1}
-            {Description.}
+            {01/2022 -- \par 12/2023}
+            {MTU Aero Engines AG}
+            {Working Student in IT Quality \& IT Governance}
+            {Providing assistance in Software Asset Management by organizing, cataloging, and maintaining the company’s software inventory, including licenses, subscriptions, and usage data.}
         \entry
-            {xx/xxxx -- \par xx/xxxx}
-            {Company Name}
-            {Working Student 2}
-            {Description.}
+            {05/2019 -- \par 02/2020}
+            {Münchener Hypothekenbank eG}
+            {Working Student in Private Client Real Estate Financing}
+            {Reviewing documents, requesting missing documentation, maintaining data in SAP, and corresponding with customers, notaries, and banks.}
     \end{entrylist}
 }
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
+\tcbset{width=1.5cm,height=.75cm, halign=center,colframe=black!10, colback=black!10, boxsep=-7pt, arc=2mm, nobeforeafter, top=12.5pt}
 \vspace{-10 pt}
-\begin{minipage}[t]{0.48\textwidth}
+
     \cvsect{Skills}
-    \vspace{-10 pt}
-    \begin{tabbing}
-        \hspace{2cm} \= \kill
-        Java \> \skilllevel{3} \\
-        JavaScript \> \skilllevel{3} \\
-        React \> \skilllevel{2} \\
-        Python \> \skilllevel{1} \\
-        C/C++ \> \skilllevel{1} \\
-    \end{tabbing}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
+
+    \begin{minipage}[t]{0.48\textwidth}
+        \textbf{Programming} \\
+        
+        \tcbox{JS / TS} \hspace{1pt}
+        \tcbox{HTML / CSS} \hspace{1pt}
+        \tcbox{Java} \hspace{1pt}
+        \tcbox{Python} 
+        
+        \vspace{5pt}
+    
+        \textbf{Frameworks \& Libraries} \\
+        
+       \tcbox{React} \hspace{1pt}
+        \tcbox{Next.js} \hspace{1pt}
+    
+        \vspace{5pt}
+    \end{minipage}    
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+    
+        \textbf{Tools} \\
+        
+        \tcbox{Git} \hspace{1pt}
+        \tcbox{CI/CD} \hspace{1pt}
+        \tcbox{WSL} \hspace{1pt}
+        \tcbox{REST APIs} \hspace{1pt}
+    
+        \vspace{5pt}
+
+        \ifthenelse{\equal{\lang}{0}}{
+        \textbf{Design \& Forschung} \\
+        }{
+        \textbf{Design \& Research} \\
+        }
+        
+        \tcbox{Figma} \hspace{1pt}
+        \tcbox{User Research} \hspace{1pt}
+        \tcbox{Usability Testing} \hspace{1pt}
+    \end{minipage}
+    
     \ifthenelse{\equal{\lang}{0}}{
         \cvsect{Sprachen}
-        \vspace{-10 pt}
-        \begin{tabbing}
-            \hspace{2cm} \= \kill
-            Deutsch \> \skilllevel{4} \\
-            Englisch\> \skilllevel{3} \\
-            Französisch \> \skilllevel{2} \\
-        \end{tabbing}
+        
+        \tcbox{Deutsch} \hspace{1pt}
+        \tcbox{Englisch} \hspace{1pt}
+        \tcbox{Türkisch} \hspace{1pt}
+        \tcbox{Französisch}
     }{
         \cvsect{Languages}
-        \vspace{-10 pt}
-        \begin{tabbing}
-            \hspace{2cm} \= \kill
-            German \> \skilllevel{4} \\
-            English\> \skilllevel{3} \\
-            French \> \skilllevel{2} \\
-        \end{tabbing}
+        
+        \tcbox{German} \hspace{1pt}
+        \tcbox{English} \hspace{1pt}
+        \tcbox{Turkish} \hspace{1pt}
+        \tcbox{French}
     }
-\end{minipage}
 
-%----------------------------------------------------------------------------------------
-% SIGNATURE AND DATE
-%----------------------------------------------------------------------------------------
-
-\vspace{20pt} 
-
-\begin{flushright}
-\begin{tabular}{@{}l@{}}
-\vspace{3pt}
-\ifthenelse{\equal{\lang}{0}}{Stadt, \today}{City, \today} \\
-\vspace{3pt}
-\includegraphics[width=3cm]{signature.png} \\ 
-%\rule{4cm}{0.4pt}
-\vspace{3pt}
-\textit{John Doe}
-\end{tabular}
-\end{flushright}
 
 \end{document}
